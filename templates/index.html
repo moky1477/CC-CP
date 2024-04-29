@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation System</title>
+</head>
+<body>
+    <h1>Crop Recommendation System</h1>
+    <form action="/predict" method="post">
+        <label for="Nitrogen">Nitrogen:</label>
+        <input type="number" name="Nitrogen" min="0" required><br><br>
+        
+        <label for="Phosphorus">Phosphorus:</label>
+        <input type="number" name="Phosphorus" min="0" required><br><br>
+        
+        <label for="Potassium">Potassium:</label>
+        <input type="number" name="Potassium" min="0" required><br><br>
+        
+        <label for="Temperature">Temperature:</label>
+        <input type="number" name="Temperature" step="any" required><br><br>
+        
+        <label for="Humidity">Humidity:</label>
+        <input type="number" name="Humidity" step="any" min="0" max="100" required><br><br>
+        
+        <label for="pH Level">pH Level:</label>
+        <input type="number" name="pH Level" step="any" min="0" max="14" required><br><br>
+        
+        <label for="Rainfall">Rainfall:</label>
+        <input type="number" name="Rainfall" step="any" min="0" required><br><br>
+        
+        <label for="model_option">Select Model for Prediction:</label>
+        <select name="model_option" id="model_option">
+            <option value="Naive Bayes (Accuracy: 99.01%)">Naive Bayes (Accuracy: 99.01%)</option>
+            <option value="SVM (Accuracy: 98%)">SVM (Accuracy: 98%)</option>
+            <option value="Neural Network (Accuracy: 96%)">Neural Network (Accuracy: 96%)</option>
+        </select><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
