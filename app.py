@@ -11,7 +11,7 @@ def load_ml_model(model_path):
     with open(model_path, 'rb') as file:
         model = pickle.load(file)
     return model
-
+ 
 svm_model = load_ml_model('Models/SVMClassifier.pkl')
 naive_bayes_model = load_ml_model('Models/NBClassifier.pkl')
 dl_model = load_ml_model('Models/DeepLearning.pkl')
